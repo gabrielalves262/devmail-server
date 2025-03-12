@@ -1,0 +1,7 @@
+dist/
+node_modules/
+*.eml
+
+public/css/
+public/js/
+emails/

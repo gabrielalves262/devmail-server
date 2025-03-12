@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+}
+
+
+.email-list-item {
+  @apply hover:bg-gray-200 border-l-6 border-l-blue-500;
+  &.selected {
+    @apply bg-gray-600;
+    & div:not(:nth-child(1)) {
+      @apply text-gray-200;
+    }
+    & div:nth-child(1) {
+      @apply text-white;
+    }
+  }
+  &[data-readed='true'] {
+    @apply border-l-gray-100;
+  }
+}

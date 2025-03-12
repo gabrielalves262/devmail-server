@@ -1,0 +1,12 @@
+src/
+node_modules/
+styles/
+files/
+emails/
+scripts/
+
+tsconfig.json
+tsconfig.app.json
+package-lock.json
+
+.gitignore
