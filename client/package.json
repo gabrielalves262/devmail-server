@@ -1,0 +1,20 @@
+{
+  "name": "client",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js && npx @tailwindcss/cli -i app/styles/global.css -o public/src/css/globals.css",
+    "build:tw": "npx @tailwindcss/cli -i app/styles/global.css -o public/src/css/globals.css",
+    "build:app": "npx webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.14",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.2",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  }
+}

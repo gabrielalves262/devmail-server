@@ -1,0 +1,13 @@
+.vscode/
+
+client/app/
+client/node_modules/
+client/tsconfig.json
+client/webpack.config.js
+
+server/node_modules/
+server/src/
+server/tsconfig.json
+
+.gitignore
+.npmignore

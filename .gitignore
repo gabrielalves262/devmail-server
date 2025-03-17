@@ -1,0 +1,7 @@
+dist/
+node_modules/
+
+*.eml
+__data.json
+
+client/public/src/
