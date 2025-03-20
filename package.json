@@ -1,15 +1,15 @@
 {
   "name": "devmail-server",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "A simple smtp server for development purposes.",
-  "workspaces":[
-    "server/*",
-    "app/*"
+  "workspaces": [
+    "./server",
+    "./client"
   ],
   "main": "server/dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/gabrielalves262/devmail-server"
+    "url": "git+https://github.com/gabrielalves262/devmail-server.git"
   },
   "engines": {
     "node": ">=22.0.0"
@@ -24,5 +24,15 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "type": "commonjs"
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "2.8.5",
+    "express": "^4.21.2",
+    "glob": "^11.0.1",
+    "mailparser": "^3.7.2",
+    "open": "^10.1.0",
+    "picocolors": "^1.1.1",
+    "tailwindcss": "^4.0.12",
+    "yargs": "^17.7.2"
+  }
 }

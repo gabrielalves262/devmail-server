@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "build": "npx webpack --config webpack.config.js && npx @tailwindcss/cli -i app/styles/global.css -o public/src/css/globals.css",
     "build:tw": "npx @tailwindcss/cli -i app/styles/global.css -o public/src/css/globals.css",
