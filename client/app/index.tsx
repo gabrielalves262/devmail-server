@@ -120,7 +120,7 @@ const App = () => {
           selectedId={selectedId}
           onSelect={onSelectHandler}
           onDelete={onDeleteHandler}
-          onDeleteAll={() => setEmails([])}
+          onDeleteAll={() => {setEmails([]), setEmail(null)}}
           onUpdateClick={onUpdateHandler}
           updating={updating}
           search={search}
