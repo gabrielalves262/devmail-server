@@ -1,4 +1,5 @@
 // @ts-nocheck
+import { ButtonInfo } from "./button-info";
 import { ButtonTheme } from "./button-theme";
 
 interface Props {
@@ -15,6 +16,7 @@ export const Header = ({ onSet, theme }: Props) => {
           <h1 className="text-xl font-bold">DevMail <small className="text-muted-foreground font-normal max-[375px]:hidden">Fake SMTP Server</small></h1>
         </div>
         <div className="flex items-center">
+          <ButtonInfo />
           <ButtonTheme
             theme={theme}
             onSet={onSet}
