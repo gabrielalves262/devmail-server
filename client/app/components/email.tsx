@@ -243,7 +243,7 @@ export const Email = ({ email }: Props) => {
       </div>
 
       <main className="flex flex-grow w-full overflow-auto scrollbar">
-        <div className="p-4 flex-grow" dangerouslySetInnerHTML={{ __html: email.html || email.textAsHtml || '' }} />
+        <iframe className="w-full" srcDoc={email.html || undefined} title={email.subject}></iframe>
       </main>
     </div>
   )
