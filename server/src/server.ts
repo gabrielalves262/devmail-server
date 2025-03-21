@@ -2,6 +2,7 @@ import express, { Request, Response, NextFunction } from 'express';
 import cors from 'cors';
 import { Email } from './emails';
 import path from 'node:path';
+import { argv } from './argv';
 
 export default () => {
   const app = express();
@@ -12,6 +13,15 @@ export default () => {
   app.use(express.json());
 
   app.use(express.static(path.resolve(__dirname, './../../client/public')));
+
+  app.get('/api/info', (req: Request, res: Response, next: NextFunction) => {
+    res.json({
+      smtpHost: argv.smtpHost === '0.0.0.0'
+        ? 'localhost'
+        : argv.smtpHost,
+      smtpPort: argv.smtpPort,
+    })
+  })
 
   app.get('/api/emails', (req: Request, res: Response, next: NextFunction) => {
     res.json(Email.list());
